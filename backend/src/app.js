@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Configurar CORS solo para la ruta /api/users
 const corsOptions = {
-  origin: "http://localhost:81", // Puedes especificar un origen específico en lugar de '*'
+  origin: "http://18.207.77.224", // Puedes especificar un origen específico en lugar de '*'
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
   optionsSuccessStatus: 204,

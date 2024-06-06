@@ -60,7 +60,7 @@ export default function Login() {
         }
       } else {
         // Autenticación fallida
-        setError("Usuario no encontrado: "+ response.message, response.status);
+        setError("Usuario no encontrado");
       }
     } catch (error) {
       // Manejar errores de red

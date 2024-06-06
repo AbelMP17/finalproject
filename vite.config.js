@@ -9,7 +9,7 @@ export default defineConfig({
     host: true,
     origin: "http://0.0.0.0:80",
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/api': 'http://0.0.0.0:3000',
     }
   },
 })

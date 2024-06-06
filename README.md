@@ -1,8 +1,10 @@
-# React + Vite
+#### TFG - DAW - Abel Martínez Peinado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Para este proyecto he implementado:
+React Vanilla, Nodejs (express), tailwind para el estilado, mariadb como gestor de base de datos, docker y nginx.
 
-Currently, two official plugins are available:
+- Para poner a funcionar el proyecto simplemente hay que encontrarse en el directorio raíz del proyecto y poner el siguiente comando:
+`/# docker-compose up -d --build`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Si no se tiene la carpeta node_modules en la carpeta raíz del proyecto y en la carpeta backend se debe de insertar el siguiente comando en ambas carpetas ('.' y './backend'):
+`/# npm install` (para instalar las dependencias del proyecto)
