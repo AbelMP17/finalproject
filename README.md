@@ -36,7 +36,7 @@
    - Abre el archivo `./src/constants.js` y reemplaza la IP existente con la IP elástica asignada en AWS:
      ```javascript
      // ./src/constants.js
-     export const API_URL = 'http://<your-elastic-ip>';
+     export const API_URL = 'http://<your-elastic-ip>/api';
      ```
 
 ### Instalación de Dependencias
