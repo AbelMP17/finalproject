@@ -1,5 +1,5 @@
 // src/controllers/userController.js
-import pool from "../config/db.js"; // Importar el pool de la base de datos
+import pool from "../config/db.js";
 
 // Obtener todos los usuarios
 export const getAllUsers = async (req, res) => {
@@ -39,12 +39,15 @@ export const getUserByName = async (req, res) => {
 // Crear un nuevo usuario
 export const createUser = async (req, res) => {
   const { name, email, passwd } = req.body;
+
   try {
     const connection = await pool.getConnection();
     const result = await connection.query(
       "INSERT INTO user (name, email, passwd, rol) VALUES (?, ?, ?, ?)",
       [name, email, passwd, "user"]
     );
+
+    connection.release();
 
     if (!result || !result.insertId) {
       throw new Error("No se pudo crear el usuario");
@@ -56,8 +59,6 @@ export const createUser = async (req, res) => {
       "SELECT id, name, email, rol FROM user WHERE id = ?",
       [userId]
     );
-
-    connection.release();
 
     if (rows.length === 0) {
       return res.status(404).json({ message: "Usuario no encontrado" });

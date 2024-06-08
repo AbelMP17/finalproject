@@ -13,8 +13,6 @@ const corsOptions = {
   optionsSuccessStatus: 204,
 };
 
-app.use("/api/users", cors(corsOptions), usuariosRouter);
-
-// Middleware para manejar el JSON
+app.use('/api/users', cors(corsOptions), usuariosRouter);
 
 export default app;

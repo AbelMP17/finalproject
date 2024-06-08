@@ -145,16 +145,18 @@ export default function SignUp() {
       );
 
       const dataUser = await responseUser.json();
+      
+      console.log('navigating to login...')
 
       // Crear conceptos financieros y rutinas de fitness
       await Promise.all([
         fetchUserAndCreateFitness(dataUser.id),
         fetchUserAndCreateFinance(dataUser.id),
+        console.log('promise'),
+        navigate("/login")
       ]);
-
-      // Redirigir al usuario a la página de login
-      console.log('navigating to login...')
-      navigate("/login");
+      
+      
     } catch (error) {
       setError("Error de red al registrar usuario");
     }

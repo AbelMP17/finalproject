@@ -49,8 +49,7 @@ export default function Login() {
             JSON.stringify({
               id: data.id,
               name: data.name,
-              email: data.email,
-              passwd: "******",
+              email: data.email
             })
           );
           window.location = "/";
