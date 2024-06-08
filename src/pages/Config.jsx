@@ -688,7 +688,7 @@ export default function Config() {
           if (rutina.added === 1) {
             const ejercicioRows = rutina.ejercicios
               .map((ejercicio) => {
-                return `${ejercicio.nombre},${ejercicio.sets},${ejercicio.reps}`;
+                return `${ejercicio.name},${ejercicio.sets},${ejercicio.reps}`;
               })
               .join("\n");
             return `${rutina.rutina_name || rutina.name}\n${"ejercicio, sets, reps"}\n${ejercicioRows}`;
